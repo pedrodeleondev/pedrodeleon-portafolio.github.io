@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+* {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #696969;
+}
+
+span, a {
+  transition: 0.5s all;
+}
+
+body .container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container header {
+  margin: 30px;
+}
+body .container header span {
+  font-size: 1.5rem;
+}
+body .container header span:hover {
+  color: #780d0d;
+}
+body .container #draggableDiv {
+  width: 150px;
+  height: 100px;
+  background-color: #ffcc00;
+  border: 2px solid #d1a100;
+  border-radius: 10px 10px 5px 5px;
+  cursor: grab;
+  position: absolute;
+}
+body .container #draggableDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 70px;
+  height: 20px;
+  background-color: #ffcc00;
+  border-bottom: 2px solid #d1a100;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: -1;
+}
+body footer {
+  margin: 30px;
+}
+body footer ul {
+  margin: 0;
+  padding: 0;
+}
+body footer ul li {
+  display: inline-block;
+}
+body footer ul li a {
+  text-decoration: none;
+}
+body footer ul li a:hover {
+  color: #780d0d;
+}
+
+.carpeta {
+  width: 100px;
+  height: 70px;
+  background-color: #ffcc00; /* Color amarillo para la carpeta */
+  border: 2px solid #cc9900; /* Borde oscuro */
+  position: relative; /* Posición relativa */
+  border-radius: 10px 10px 5px 5px; /* Bordes redondeados */
+}
+
+/* Estilo para la solapa de la carpeta */
+.carpeta::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Levantar la solapa un poco */
+  left: 10px; /* Posición de la solapa */
+  width: 60px;
+  height: 20px;
+  background-color: #ffcc00;
+  border-bottom: 2px solid #cc9900;
+  border-top-left-radius: 10px; /* Bordes redondeados */
+  border-top-right-radius: 10px;
+}
+
+/* Estilo para el contenedor de la carpeta y el texto */
+.carpeta-container {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: grab;
+}
+
+/* Estilo para el texto */
+.texto {
+  margin-top: 5px; /* Espacio entre la carpeta y el texto */
+}
+
+/*# sourceMappingURL=style.css.map */
